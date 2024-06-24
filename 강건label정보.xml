@@ -1,0 +1,77 @@
+<config>
+    <label>
+        <id>0</id>
+        <name>unlabeled</name>
+        <description>all points with no special label.</description>
+        <color>0 0 0</color>
+        <root>void</root>
+        <macro></macro>
+        <category>unlabeled</category>
+    </label>
+
+
+    <label>
+        <id>1</id>
+        <name>outlier</name>
+        <description>all points which are outliers, i.e., caused by reflection, etc..</description>
+        <color>255 3 242</color>
+        <root>void</root>
+        <macro></macro>
+        <category>outlier</category>
+    </label>
+    
+    <label>
+        <id>10</id>
+        <name>car</name>
+        <description>This includes cars, jeeps, SUVs, vans with a continuous body shape (i.e. the driver cabin and cargo compartment are one)</description>
+        <color>255 0 0</color>
+        <root>vehicle</root>
+        <macro>vehicle</macro>
+        <category>car</category>
+        <moving>252</moving>
+        <instanceable>true</instanceable>
+    </label>
+    
+
+    <label>
+        <id>49</id>
+        <name>floor</name>
+        <description>Other areas that are not used by pedestrians or meant for driving.</description>
+        <color>171 171 171</color>
+        <root>ground</root>
+        <macro>flat</macro>
+        <category>ground</category>
+    </label>
+    
+
+    <label>
+        <id>50</id>
+        <name>wall</name>
+        <description> walls , small walls</description>
+        <color>100 150 245</color>
+        <root>structure</root>
+        <macro>structure</macro>
+        <category>wall</category>
+    </label>
+
+    <label>
+        <id>51</id>
+        <name>ceiling</name>
+        <description>ceiling </description>
+        <color>59 168 5</color>
+        <root>structure</root>
+        <category>ceiling</category>
+    </label>
+
+    <label>
+        <id>80</id>
+        <name>pillar</name>
+        <description> pillar </description>
+        <color>255 140 0</color>
+        <root>structure</root>
+        <macro>structure</macro>
+        <category>pole</category>
+    </label>
+
+
+</config>
