@@ -12,7 +12,7 @@ model = dict(
     backbone=dict(
         type="PT-v2m2",
         in_channels=4,
-        num_classes=19,
+        num_classes=5,
         patch_embed_depth=1,
         patch_embed_channels=48,
         patch_embed_groups=6,
@@ -37,8 +37,7 @@ model = dict(
     # fmt: off
     criteria=[
         dict(type="CrossEntropyLoss",
-             weight=[3.1557, 8.7029, 7.8281, 6.1354, 6.3161, 7.9937, 8.9704, 10.1922, 1.6155, 4.2187,
-                     1.9385, 5.5455, 2.0198, 2.6261, 1.3212, 5.1102, 2.5492, 5.8585, 7.3929],
+             weight=[3.1557, 8.7029, 7.8281, 6.1354, 6.3161],
              loss_weight=1.0,
              ignore_index=-1),
         dict(type="LovaszLoss", mode="multiclass", loss_weight=1.0, ignore_index=-1),
@@ -65,28 +64,14 @@ data_root = "data/semantic_kitti"
 ignore_index = -1
 names = [
     "car",
-    "bicycle",
-    "motorcycle",
-    "truck",
-    "other-vehicle",
-    "person",
-    "bicyclist",
-    "motorcyclist",
-    "road",
-    "parking",
-    "sidewalk",
-    "other-ground",
-    "building",
-    "fence",
-    "vegetation",
-    "trunk",
-    "terrain",
-    "pole",
-    "traffic-sign",
+    "floor",
+    "wall",
+    "ceiling",
+    "pillar",
 ]
 
 data = dict(
-    num_classes=19,
+    num_classes=5,
     ignore_index=ignore_index,
     names=names,
     train=dict(
