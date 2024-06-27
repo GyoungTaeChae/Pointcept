@@ -46,7 +46,7 @@ model = dict(
 )
 
 # scheduler settings
-epoch = 5
+epoch = 1
 eval_epoch = 1
 optimizer = dict(type="AdamW", lr=0.002, weight_decay=0.005)
 scheduler = dict(
